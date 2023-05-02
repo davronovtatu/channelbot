@@ -1,6 +1,7 @@
-
+import os
 
 # .env fayl ichidan quyidagilarni o'qiymiz
-BOT_TOKEN = "5598717980:AAGdWiN19LnDvHXo6GdW4_ONNInvCQsLv0g"
-ADMINS =[1962258253]
-IP = 'localhost'  # Xosting ip manzili
+BOT_TOKEN = str(os.environ.get("BOT_TOKEN"))  # Bot token
+ADMINS = list(os.environ.get("ADMINS"))  # adminlar ro'yxati
+IP = str(os.environ.get("ip"))  # Xosting ip manzili
+open_weather_token = str(os.environ.get("open_weather_token"))
